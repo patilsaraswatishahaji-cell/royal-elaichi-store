@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Royal Elaichi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f5f0;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #2e4d2c;
-      color: white;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    .tagline {
-      font-size: 18px;
-      margin-top: 5px;
-      font-style: italic;
-    }
-    .hero {
-      padding: 40px 20px;
-    }
-    .hero img {
-      width: 250px;
-    }
-    .products {
-      padding: 20px;
-    }
-    .product {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin: 15px;
-      display: inline-block;
-      width: 250px;
-      background: white;
-      border-radius: 10px;
-    }
-    .btn {
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    footer {
-      background: #2e4d2c;
-      color: white;
-      padding: 10px;
-      margin-top: 30px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Elaichi – Premium Ilaychi</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f5f0;
+}
+
+/* HEADER */
+header {
+  background: #1f3d2b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+.tagline {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+.hero img {
+  width: 280px;
+  border-radius: 10px;
+}
+.hero h2 {
+  margin-top: 20px;
+}
+
+/* PRODUCTS SCROLL */
+.products {
+  padding: 20px;
+}
+.product-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+.product {
+  min-width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+.product h3 {
+  margin: 10px 0 5px;
+}
+.btn {
+  background: #25D366;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #1f3d2b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+</style>
 </head>
 
 <body>
@@ -70,29 +95,42 @@
 </header>
 
 <section class="hero">
+  <img src="https://images.unsplash.com/photo-1604908176997-431bfa30d1c1">
   <h2>Premium Quality Ilaychi</h2>
-  <p>Fresh, aromatic, and handpicked cardamom delivered to your home.</p>
+  <p>Fresh • Aromatic • Handpicked</p>
 </section>
 
 <section class="products">
-  <h2>Our Products</h2>
+  <h2 style="text-align:center;">Our Products</h2>
 
-  <div class="product">
-    <h3>Premium Elaichi 50g</h3>
-    <p>₹199</p>
-    <a class="btn" href="https://wa.me/919175695739">Order on WhatsApp</a>
+  <div class="product-container">
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc">
+      <h3>50g Elaichi</h3>
+      <p>₹199</p>
+      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%2050g%20Royal%20Elaichi">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
+      <h3>100g Elaichi</h3>
+      <p>₹349</p>
+      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20100g%20Royal%20Elaichi">Order</a>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc">
+      <h3>Premium Pack</h3>
+      <p>₹599</p>
+      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20Premium%20Royal%20Elaichi">Order</a>
+    </div>
+
   </div>
-
-  <div class="product">
-    <h3>Premium Elaichi 100g</h3>
-    <p>₹349</p>
-    <a class="btn" href="https://wa.me/919175695739">Order on WhatsApp</a>
-  </div>
-
 </section>
 
 <footer>
-  <p>© 2026 Royal Elaichi | Contact: +919175695739</p>
+  <p>© 2026 Royal Elaichi | Contact: +91 9175695739</p>
 </footer>
 
 </body>
