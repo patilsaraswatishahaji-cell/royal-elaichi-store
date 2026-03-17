@@ -9,41 +9,48 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f8f5f0;
+  background: #f5f2ea;
+  color: #333;
 }
 
 /* HEADER */
 header {
-  background: #1f3d2b;
+  background: linear-gradient(to right, #1b3a2f, #2f5d46);
   color: white;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
 }
 header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 38px;
+  letter-spacing: 1px;
 }
 .tagline {
   font-style: italic;
-  margin-top: 5px;
+  color: #d4af37;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 .hero img {
   width: 280px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 .hero h2 {
   margin-top: 20px;
+  font-size: 28px;
+}
+.hero p {
+  color: #555;
 }
 
-/* PRODUCTS SCROLL */
+/* PRODUCTS */
 .products {
-  padding: 20px;
+  padding: 30px;
 }
 .product-container {
   display: flex;
@@ -52,12 +59,12 @@ header h1 {
   padding: 10px;
 }
 .product {
-  min-width: 250px;
+  min-width: 260px;
   background: white;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .product img {
   width: 100%;
@@ -66,23 +73,62 @@ header h1 {
 .product h3 {
   margin: 10px 0 5px;
 }
+.product p {
+  font-weight: bold;
+  color: #2f5d46;
+}
+
+/* BUTTON */
 .btn {
-  background: #25D366;
-  color: white;
-  padding: 10px;
+  background: #d4af37;
+  color: black;
+  padding: 10px 15px;
   text-decoration: none;
+  border-radius: 6px;
   display: inline-block;
-  border-radius: 5px;
   margin-top: 10px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #b8962e;
+}
+
+/* FEATURES */
+.features {
+  background: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.features h2 {
+  margin-bottom: 20px;
+}
+.feature-box {
+  display: inline-block;
+  width: 250px;
+  margin: 15px;
+}
+.feature-box h3 {
+  color: #2f5d46;
+}
+
+/* REVIEWS */
+.reviews {
+  background: #f0ede6;
+  padding: 40px 20px;
+  text-align: center;
+}
+.review {
+  max-width: 400px;
+  margin: 15px auto;
+  font-style: italic;
 }
 
 /* FOOTER */
 footer {
-  background: #1f3d2b;
+  background: #1b3a2f;
   color: white;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
 }
 </style>
 </head>
@@ -96,8 +142,8 @@ footer {
 
 <section class="hero">
   <img src="https://images.unsplash.com/photo-1604908176997-431bfa30d1c1">
-  <h2>Premium Quality Ilaychi</h2>
-  <p>Fresh • Aromatic • Handpicked</p>
+  <h2>Experience True Aroma</h2>
+  <p>Handpicked premium elaichi crafted for rich taste and fragrance.</p>
 </section>
 
 <section class="products">
@@ -127,6 +173,28 @@ footer {
     </div>
 
   </div>
+</section>
+
+<section class="features">
+  <h2>Why Choose Us</h2>
+  <div class="feature-box">
+    <h3>🌿 100% Natural</h3>
+    <p>No chemicals, pure farm-fresh elaichi.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🚚 Fast Delivery</h3>
+    <p>Quick and reliable delivery across India.</p>
+  </div>
+  <div class="feature-box">
+    <h3>💎 Premium Quality</h3>
+    <p>Handpicked pods with rich aroma.</p>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review">“Amazing fragrance and quality. Loved it!” ⭐⭐⭐⭐⭐</div>
+  <div class="review">“Best elaichi I’ve bought online.” ⭐⭐⭐⭐⭐</div>
 </section>
 
 <footer>
