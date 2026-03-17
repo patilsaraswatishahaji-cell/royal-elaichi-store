@@ -3,124 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Elaichi – Premium Ilaychi</title>
+<title>Royal Masala</title>
 
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f5f2ea;
+  background: #f8f6f1;
   color: #333;
 }
 
-/* HEADER */
-header {
-  background: linear-gradient(to right, #1b3a2f, #2f5d46);
-  color: white;
-  padding: 25px;
-  text-align: center;
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  z-index: 1000;
 }
-header h1 {
-  margin: 0;
-  font-size: 38px;
-  letter-spacing: 1px;
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2f5d46;
 }
-.tagline {
-  font-style: italic;
-  color: #d4af37;
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 /* HERO */
 .hero {
+  background: linear-gradient(to right, #1b3a2f, #2f5d46);
+  color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 50px 20px;
 }
-.hero img {
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.hero h2 {
-  margin-top: 20px;
-  font-size: 28px;
+.hero h1 {
+  font-size: 40px;
 }
 .hero p {
-  color: #555;
+  margin: 15px 0;
+  color: #ddd;
+}
+.cta-btn {
+  background: #d4af37;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BANNER */
+.banner {
+  background: #d4af37;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
 /* PRODUCTS */
 .products {
-  padding: 10px 20px 20px;
+  padding: 40px 20px;
 }
+.products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .product-container {
   display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 10px;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
+
 .product {
-  min-width: 260px;
+  width: 260px;
   background: white;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
 }
+.product:hover {
+  transform: translateY(-8px);
+}
+
+/* DISCOUNT BADGE */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
 .product img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
 }
+
 .product h3 {
   margin: 10px 0 5px;
 }
-.product p {
+
+.price {
+  font-size: 18px;
   font-weight: bold;
   color: #2f5d46;
 }
 
+/* SHIPPING */
+.shipping {
+  font-size: 13px;
+  color: #888;
+}
+
 /* BUTTON */
 .btn {
-  background: #d4af37;
-  color: black;
+  background: #2f5d46;
+  color: white;
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 6px;
   display: inline-block;
   margin-top: 10px;
-  font-weight: bold;
 }
 .btn:hover {
-  background: #b8962e;
+  background: #1b3a2f;
 }
 
 /* FEATURES */
 .features {
-  background: #ffffff;
   padding: 40px 20px;
   text-align: center;
-}
-.features h2 {
-  margin-bottom: 20px;
+  background: #fff;
 }
 .feature-box {
   display: inline-block;
   width: 250px;
   margin: 15px;
-}
-.feature-box h3 {
-  color: #2f5d46;
-}
-
-/* REVIEWS */
-.reviews {
-  background: #f0ede6;
-  padding: 40px 20px;
-  text-align: center;
-}
-.review {
-  max-width: 400px;
-  margin: 15px auto;
-  font-style: italic;
 }
 
 /* FOOTER */
@@ -128,97 +164,113 @@ footer {
   background: #1b3a2f;
   color: white;
   text-align: center;
+  padding: 20px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
   padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Royal Elaichi</h1>
-  <div class="tagline">Flavor That Speaks • Luxury in Every Pod
-  <p>Handpicked premium elaichi crafted for rich taste and fragrance.</p>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Royal Masala</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
   </div>
-  
+</nav>
 
-</header>
+<!-- HERO -->
+<section class="hero">
+  <h1>Pure & Raw Spices</h1>
+  <p>Direct from farms to your kitchen 🌿</p>
+  <a href="#products" class="cta-btn">Shop Now</a>
+</section>
 
+<!-- BANNER -->
+<div class="banner">
+  🚚 Free Shipping on Orders Above ₹499
+</div>
 
-<section class="products">
-  <h2 style="text-align:center;">Our Products</h2>
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <h2>Our Best Sellers</h2>
 
   <div class="product-container">
 
+    <!-- Elaichi -->
     <div class="product">
+      <div class="badge">Best Seller</div>
       <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>50g Elaichi</h3>
-      <p>₹199</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%2050g%20Royal%20Elaichi">Order</a>
+      <h3>Elaichi</h3>
+      <p class="price">₹349</p>
+      <p class="shipping">Shipping charges apply</p>
+      <a class="btn" href="https://wa.me/917720969729?text=I want Elaichi">Order</a>
     </div>
 
+    <!-- Lasun -->
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>100g Elaichi</h3>
-      <p>₹349</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20100g%20Royal%20Elaichi">Order</a>
+      <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38">
+      <h3>Lasun</h3>
+      <p class="price">₹199</p>
+      <p class="shipping">Shipping charges apply</p>
+      <a class="btn" href="https://wa.me/917720969729?text=I want Lasun">Order</a>
     </div>
 
+    <!-- Haldi -->
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>Premium Pack</h3>
-      <p>₹599</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20Premium%20Royal%20Elaichi">Order</a>
-    </div>
-      <div class="product">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>50g Elaichi</h3>
-      <p>₹199</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%2050g%20Royal%20Elaichi">Order</a>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>100g Elaichi</h3>
-      <p>₹349</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20100g%20Royal%20Elaichi">Order</a>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d">
-      <h3>Premium Pack</h3>
-      <p>₹599</p>
-      <a class="btn" href="https://wa.me/919175695739?text=Hi%20I%20want%20to%20order%20Premium%20Royal%20Elaichi">Order</a>
+      <div class="badge">Organic</div>
+      <img src="https://images.unsplash.com/photo-1615486362362-4d8b5e64bfb3">
+      <h3>Haldi</h3>
+      <p class="price">₹149</p>
+      <p class="shipping">Shipping charges apply</p>
+      <a class="btn" href="https://wa.me/917720969729?text=I want Haldi">Order</a>
     </div>
 
   </div>
 </section>
 
+<!-- FEATURES -->
 <section class="features">
   <h2>Why Choose Us</h2>
+
   <div class="feature-box">
     <h3>🌿 100% Natural</h3>
-    <p>No chemicals, pure farm-fresh elaichi.</p>
+    <p>No chemicals, pure spices</p>
   </div>
+
   <div class="feature-box">
     <h3>🚚 Fast Delivery</h3>
-    <p>Quick and reliable delivery across India.</p>
+    <p>Across India</p>
   </div>
+
   <div class="feature-box">
     <h3>💎 Premium Quality</h3>
-    <p>Handpicked pods with rich aroma.</p>
+    <p>Handpicked spices</p>
   </div>
 </section>
 
-<section class="reviews">
-  <h2>Customer Reviews</h2>
-  <div class="review">“Amazing fragrance and quality. Loved it!” ⭐⭐⭐⭐⭐</div>
-  <div class="review">“Best elaichi I’ve bought online.” ⭐⭐⭐⭐⭐</div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Royal Elaichi | Contact: +91 9175695739</p>
+  <p>© 2026 Royal Masala | +91 7720969729</p>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/917720969729">💬</a>
 
 </body>
 </html>
